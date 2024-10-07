@@ -18,9 +18,9 @@ fi
 if [ ! -e $ROOTFS_DIR/.installed ]; then
   echo "#######################################################################################"
   echo "#"
-  echo "#                                      Foxytoux INSTALLER"
+  echo "#                                      ArianDexapys Proot Fooler(Intel Edition)"
   echo "#"
-  echo "#                           Copyright (C) 2024, RecodeStudios.Cloud"
+  echo "#                           Copyright (C) 2024, Intel DevCloud Expiermental Root Script"
   echo "#"
   echo "#"
   echo "#######################################################################################"
@@ -41,22 +41,22 @@ esac
 
 if [ ! -e $ROOTFS_DIR/.installed ]; then
   mkdir $ROOTFS_DIR/usr/local/bin -p
-  wget --tries=$max_retries --timeout=$timeout --no-hsts -O $ROOTFS_DIR/usr/local/bin/proot "https://raw.githubusercontent.com/foxytouxxx/freeroot/main/proot-${ARCH}"
+  wget --tries=$max_retries --timeout=$timeout --no-hsts -O $ROOTFS_DIR/usr/local/bin/file2Uwepj "https://raw.githubusercontent.com/foxytouxxx/freeroot/main/proot-${ARCH}"
 
-  while [ ! -s "$ROOTFS_DIR/usr/local/bin/proot" ]; do
-    rm $ROOTFS_DIR/usr/local/bin/proot -rf
-    wget --tries=$max_retries --timeout=$timeout --no-hsts -O $ROOTFS_DIR/usr/local/bin/proot "https://raw.githubusercontent.com/foxytouxxx/freeroot/main/proot-${ARCH}"
+  while [ ! -s "$ROOTFS_DIR/usr/local/bin/file2Uwepj" ]; do
+    rm $ROOTFS_DIR/usr/local/bin/file2Uwepj -rf
+    wget --tries=$max_retries --timeout=$timeout --no-hsts -O $ROOTFS_DIR/usr/local/bin/file2Uwepj "https://raw.githubusercontent.com/foxytouxxx/freeroot/main/proot-${ARCH}"
 
-    if [ -s "$ROOTFS_DIR/usr/local/bin/proot" ]; then
-      chmod 755 $ROOTFS_DIR/usr/local/bin/proot
+    if [ -s "$ROOTFS_DIR/usr/local/bin/file2Uwepj" ]; then
+      chmod 755 $ROOTFS_DIR/usr/local/bin/file2Uwepj
       break
     fi
 
-    chmod 755 $ROOTFS_DIR/usr/local/bin/proot
+    chmod 755 $ROOTFS_DIR/usr/local/bin/file2Uwepj
     sleep 1
   done
 
-  chmod 755 $ROOTFS_DIR/usr/local/bin/proot
+  chmod 755 $ROOTFS_DIR/usr/local/bin/file2Uwepj
 fi
 
 if [ ! -e $ROOTFS_DIR/.installed ]; then
@@ -79,6 +79,6 @@ display_gg() {
 clear
 display_gg
 
-$ROOTFS_DIR/usr/local/bin/proot \
+$ROOTFS_DIR/usr/local/bin/file2Uwepj \
   --rootfs="${ROOTFS_DIR}" \
   -0 -w "/root" -b /dev -b /sys -b /proc -b /etc/resolv.conf --kill-on-exit
